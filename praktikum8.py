@@ -113,11 +113,11 @@ class NilaiApp:
         frm.pack(fill='both', expand=True)
 
         tk.Label(frm, text='Nama:').grid(row=0, column=0, sticky='w')
-        n_nama = tk.Entry(frm, width=40)
-        n_nama.grid(row=0, column=1, pady=6)
-        n_nama.insert(0, nama)
+        e_nama = tk.Entry(frm, width=40)
+        e_nama.grid(row=0, column=1, pady=6)
+        e_nama.insert(0, nama)
 
         tk.Label(frm, text='Biologi:').grid(row=1, column=0, sticky='w')
-        n_bio = tk.Entry(frm, width=12)
-        n_bio.grid(row=1, column=1, sticky='w', pady=6)
-        n_bio.insert(0, bio)
+        e_bio = tk.Entry(frm, width=12)
+        e_bio.grid(row=1, column=1, sticky='w', pady=6)
+        e_bio.insert(0, bio)
