@@ -94,3 +94,30 @@ def Prediksi():
     baca_data()
 
     root.mainloop()
+
+class NilaiApp:
+    def edit_selected(self):
+        sel = self.get_selected()
+        if not sel:
+            return
+        record_id, nama, bio, fis, ing, prediksi = sel
+
+        win = tk.Toplevel(self.root)
+        win.title(f'Edit Entri ID {record_id}')
+        win.transient(self.root)
+        win.grab_set()
+        win.geometry('420x220')
+        tk.Label(win, text=f'Edit data ID {record_id}', style='Header.TLabel').pack(anchor='w', padx=12, pady=(8,4))
+
+        frm = tk.Frame(win, paddning=12)
+        frm.pack(fill='both', expand=True)
+
+        tk.Label(frm, text='Nama:').grid(row=0, column=0, sticky='w')
+        n_nama = tk.Entry(frm, width=40)
+        n_nama.grid(row=0, column=1, pady=6)
+        n_nama.insert(0, nama)
+
+        tk.Label(frm, text='Biologi:').grid(row=1, column=0, sticky='w')
+        n_bio = tk.Entry(frm, width=12)
+        n_bio.grid(row=1, column=1, sticky='w', pady=6)
+        n_bio.insert(0, bio)
